@@ -247,7 +247,7 @@ describe('handler', () => {
             labelMatchers: [['self-hosted', 'x64', 'linux']],
             exactMatch: true,
           },
-        }
+        },
       ]);
       const event = JSON.stringify({
         ...workflowjob_event,
@@ -295,7 +295,6 @@ describe('handler', () => {
       expect(resp.statusCode).toBe(202);
       expect(sendActionRequest).not.toBeCalled;
     });
-
 
     it('Check webhook will accept jobs with a single acceptable label.', async () => {
       process.env.RUNNER_CONFIG = JSON.stringify([
