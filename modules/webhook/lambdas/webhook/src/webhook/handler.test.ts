@@ -239,7 +239,7 @@ describe('handler', () => {
       expect(sendActionRequest).toBeCalled();
     });
 
-    it('Check webhook does not accept jobs where not all labels are supported by the runner (single matcher).', async () => {
+    it('Check webhook does not accept jobs where not all labels are supported (single matcher).', async () => {
       process.env.RUNNER_CONFIG = JSON.stringify([
         {
           ...queuesConfig[0],
