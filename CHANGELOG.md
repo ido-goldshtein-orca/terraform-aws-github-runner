@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/philips-labs/terraform-aws-github-runner/compare/v2.1.1...v2.2.0) (2023-01-12)
+
+
+### Features
+
+* Add runner logfiles to output ([#2858](https://github.com/philips-labs/terraform-aws-github-runner/issues/2858)) ([a1013e9](https://github.com/philips-labs/terraform-aws-github-runner/commit/a1013e91f0fe380ff7988e20e9efea78e73acea6))
+
 ## [2.1.1](https://github.com/philips-labs/terraform-aws-github-runner/compare/v2.1.0...v2.1.1) (2023-01-12)
 
 
