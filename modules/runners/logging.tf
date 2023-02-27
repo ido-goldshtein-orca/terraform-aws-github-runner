@@ -47,7 +47,8 @@ resource "aws_ssm_parameter" "cloudwatch_agent_config_runner" {
   value = var.cloudwatch_config != null ? var.cloudwatch_config : templatefile("${path.module}/templates/cloudwatch_config.json", {
     logfiles = jsonencode(local.logfiles)
   })
-  tags = local.tags
+  overwrite = true
+  tags      = local.tags
 }
 
 resource "aws_cloudwatch_log_group" "gh_runners" {
