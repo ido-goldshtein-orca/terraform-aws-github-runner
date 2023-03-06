@@ -65,6 +65,7 @@ variable "multi_runner_config" {
       userdata_template                       = optional(string, null)
       enable_runner_detailed_monitoring       = optional(bool, false)
       enable_cloudwatch_agent                 = optional(bool, true)
+      cloudwatch_config                       = optional(string, null)
       userdata_pre_install                    = optional(string, "")
       userdata_post_install                   = optional(string, "")
       runner_ec2_tags                         = optional(map(string), {})
@@ -448,12 +449,6 @@ variable "lambda_security_group_ids" {
   description = "List of security group IDs associated with the Lambda function."
   type        = list(string)
   default     = []
-}
-
-variable "cloudwatch_config" {
-  description = "(optional) Replaces the module default cloudwatch log config. See https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html for details."
-  type        = string
-  default     = null
 }
 
 variable "instance_profile_path" {
